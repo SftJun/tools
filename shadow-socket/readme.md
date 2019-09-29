@@ -15,3 +15,10 @@ nohup ssserver -c /etc/shadowsocks.json > /dev/null  &
 ```
 ssserver -c /etc/shadowsocks.json -d start
 ```
+
+### Alter Port
+
+If you change port from config file `/etc/shadowsocks.json`, you must open port for firewall.
+```
+firewall-cmd --permanent --add-port=XXX/tcp // xxx is your target port number.
+```
